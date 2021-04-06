@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Kolegij:Razvoj naprednih web aplikacija">
+  <meta name="description" content="Naziv projekta:Uzorak baze podataka zaposlenika">
+  <meta name="keywords" content="HTML5, CSS">
+  <meta name="author" content="Magdalena Rajić i Helena Zeko">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Employees Sample Database</title>
+<style>
+
+* {
+  box-sizing: border-box;
+
+}
+body {
+  background-color: #999;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.topnav {
+  background-color:rgb(78, 85, 76);
+  color: white;
+  text-align: left;
+  padding: 12px;
+border-top: 1px solid white;
+border-bottom: 1px solid white;
+  
+}
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+
+}
+.topnav a:hover {
+  background-color: rgb(199, 178, 178);
+  color: black;
+}
+
+.logo a{
+  float:right;
+  padding-top: 30px;
+  padding-right: 30px;
+  font-size: 17px;
+  color: whitesmoke;
+}
+.logo a:hover{
+  background-color: rgb(199, 178, 178);
+  color: black;
+}
+.logo img{
+  padding: 5px;
+}
+.logo{
+  background-color:rgb(78, 85, 76);
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+.footer {
+  background-color: rgb(182, 150, 140);
+  color: white;
+  text-align: center;
+  padding: 4px;
+  border-top: 1px solid white;
+}
+table{
+  border: 1px solid rgb(46, 45, 45);
+  padding-left: 20px;
+  border-collapse: collapse;
+  background-color: rgb(241, 233, 233);
+  color:rgb(80, 74, 72)
+}
+tr {
+  padding-left: 10px;
+  border: 1px solid rgb(112, 218, 90);
+}
+.img-container {
+        padding: 30px;
+        display: block;
+        height: auto;
+      }
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 20px;
+  height: 120px; 
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 600px) {
+  .column{
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+.column1 {
+  float: left;
+  padding: 10px;
+  height: 1200px; 
+}
+.right{
+width: 25%;
+}
+.left{
+width: 75%;
+}
+@media screen and (max-width: 600px) {
+  .column1{
+    width: 100%;
+    height:auto;
+  }
+}
+
+</style>
+</head>
+
+<body style="font-family:Georgia, 'Times New Roman', Times, serif;">
+  <div class="row">
+    <div class="column" style="background-color:#aaa;">
+      <img src="logo.png" alt="" width="95" height="85" >
+    </div>
+    <div class="column" style="background-color:#aaa; text-align:right;">
+      <a href="">Prijava</a>
+      <a href="">Registracija</a>
+    </div>
+  </div>
+
+
+<div class="topnav"  id="mytopnav">
+         <a href="index.html">Home</a>
+         <a href="http://fsre.sum.ba/naslovnica/">FSRE</a>
+         <a href="https://www.sum.ba/">SUM</a>
+         <a href="http://moodle.fsre.sum.ba/">eLearning</a>
+         <a href="https://github.com/helenazeko/RNWA"> Github projektnog tima </a>
+
+</div>
+
+
+<div class ="row">
+  <div class= "column1 left" style="width: 75%;">
+          <h3 style="text-align:center;"> Kolegij - Razvoj naprednih web aplikacija</h3>
+          <h3>Naziv projekta - Employees Sample Database </h3>
+          <h4>Opis projekta -> <a href="https://dev.mysql.com/doc/employee/en/sakila-structure.html" > https://dev.mysql.com/doc/employee/en/sakila-structure.html </a> </h4>
+          <h5>Download and Install -> <a href="https://github.com/datacharmer/test_db" > https://github.com/datacharmer/test_db </a> </h5>
+          <p >Ovaj dokument opisuje Employees -uzorak baze podataka zaposlenika.</p>
+          <p style="text-align:justify;"> Uzorak baze podataka zaposlenika razvili su Patrick Crews i Giuseppe Maxia i pruža kombinaciju velike baze podataka (približno 160 MB) raspoređenih u šest zasebnih tablica, a ukupno se sastoji od 4 milijuna zapisa. Struktura je kompatibilna sa širokim rasponom tipova uređaja za pohranu podataka. Kroz uključenu podatkovnu datoteku također se pruža podrška za particionirane tablice.
+
+            <br> Pored osnovnih podataka, baza podataka zaposlenika također uključuje i niz testova koji se mogu izvršiti na svim testnim podacima kako bi se osigurala cjelovitost podataka koje ste učitali. To bi trebalo osigurati kvalitetu podataka tijekom početnog učitavanja, a može se koristiti i nakon upotrebe kako bi se osiguralo da nisu izvršene promjene u bazi podataka tijekom testiranja.</p>
+            <h3>Instalacija </h3>
+            <p style="text-align:justify;"> Baza podataka o zaposlenicima dostupna je iz DB-a zaposlenika na GitHub-u . Možete preuzeti pretpakiranu arhivu podataka ili pristupiti informacijama putem Gita.
+
+              Da biste koristili Zip arhivski paket, preuzmite arhivu i raspakirajte je pomoću <b>WinZip </b> ili drugog alata koji može čitati .zipdatoteke, a zatim promijenite mjesto u raspakirani direktorij paketa. Na primjer, pomoću <b>unzipa </b> izvršite ove naredbe:</p>
+         <table style="width: 70%">
+          <tr>
+            <td> 1 </td>
+            <td>  shell>  unzip test_db-master.zip </td>
+          </tr>
+          <tr>
+            <td> 2 </td>
+            <td>  shell>  cd test_db-master/</td>
+          </tr>
+         </table>
+          
+         <p style="text-align:justify;"> Baza podataka Employees kompatibilna je s nekoliko različitih mehanizama za pohranu podataka, s tim da je InnoDB engine omogućen prema zadanim postavkama. Uredite employees.sqldatoteku i prilagodite komentare kako biste odabrali drugi mehanizam za pohranu:</p>
+         <table style="width:70%">
+          <tr>
+            <td> 1 </td>
+            <td>  -- set storage_engine = InnoDB; </td>
+          </tr>
+          <tr>
+            <td> 2 </td>
+            <td>  -- set storage_engine = MyISAM;</td>
+          </tr>
+          <tr>
+            <td> 3 </td>
+            <td>  -- set storage_engine = Falcon; </td>
+          </tr>
+          <tr>
+            <td> 4 </td>
+            <td>  -- set storage_engine = PBXT;</td>
+          </tr>
+          <tr>
+            <td> 5 </td>
+            <td>  -- set storage_engine = Maria;</td>
+          </tr>
+         </table>
+         <div class="img-container">
+          <p>
+            Sljedeći dijagram daje pregled strukture uzorka baze podataka zaposlenika.
+          </p>
+          <img src="primjer.png" alt="Slika 1 Shema zaposlenika" width="300" height="300" >
+        </div>
+      </div>
+        <div class="column1 right" style="background-color:#bbb;">
+          
+          <h2>Licenca za bazu podataka o zaposlenicima</h2>
+          <h5 style="text-align:left;"> Ovo je djelo licencirano pod licencom Creative Commons Attribution-Share Alike 3.0 Unported. Da biste pogledali kopiju ove licence, posjetite <a href="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/ </a>  ili pošaljite pismo Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.</h5>
+        
+        </div>
+</div>
+
+
+<div class="footer">
+    <p>PROJEKTNI TIM 1: <br>  Magdalena Rajić 
+    <a href="mailto:magdalena.rajic@student.fsre.ba"> magdalena.rajic@student.fsre.ba</a><br> Helena Zeko 
+    <a href="mailto:helena.zeko@student.fsre.ba"> helena.zeko@student.fsre.ba</a> </p>
+  
+</div>
+
+</body>
+</html>
