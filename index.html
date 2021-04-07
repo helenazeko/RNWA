@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="Kolegij:Razvoj naprednih web aplikacija">
-  <meta name="description" content="Naziv projekta:Uzorak baze podataka zaposlenika">
   <meta name="keywords" content="HTML5, CSS">
   <meta name="author" content="Magdalena Rajić i Helena Zeko">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,18 +14,16 @@
 
 }
 body {
-  background-color: #999;
+  background-color: white;
   padding: 0;
   margin: 0;
-  width: 100vw;
-  height: 100vh;
 }
 
 .topnav {
-  background-color:rgb(78, 85, 76);
+  background-color:rgb(68, 100, 58);
   color: white;
   text-align: left;
-  padding: 12px;
+  padding: 13px;
 border-top: 1px solid white;
 border-bottom: 1px solid white;
   
@@ -43,75 +40,8 @@ border-bottom: 1px solid white;
   color: black;
 }
 
-.logo a{
-  float:right;
-  padding-top: 30px;
-  padding-right: 30px;
-  font-size: 17px;
-  color: whitesmoke;
-}
-.logo a:hover{
-  background-color: rgb(199, 178, 178);
-  color: black;
-}
-.logo img{
-  padding: 5px;
-}
-.logo{
-  background-color:rgb(78, 85, 76);
-}
-
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-
-[class*="col-"] {
-  float: left;
-  padding: 15px;
-  height: 900px;
-}
-
-
-/* For mobile phones: */
-[class*="col-"] {
-  width: 100%;
-}
-
-@media only screen and (min-width: 600px) {
-  /* For tablets: */
-  .col-s-1 {width: 8.33%;}
-  .col-s-2 {width: 16.66%;}
-  .col-s-3 {width: 25%;}
-  .col-s-4 {width: 33.33%;}
-  .col-s-5 {width: 41.66%;}
-  .col-s-6 {width: 50%;}
-  .col-s-7 {width: 58.33%;}
-  .col-s-8 {width: 66.66%;}
-  .col-s-9 {width: 75%;}
-  .col-s-10 {width: 83.33%;}
-  .col-s-11 {width: 91.66%;}
-  .col-s-12 {width: 100%;}
-}
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
-}
 .footer {
-  background-color: rgb(182, 150, 140);
+  background-color: rgb(68, 101, 58);
   color: white;
   text-align: center;
   padding: 4px;
@@ -128,18 +58,66 @@ tr {
   padding-left: 10px;
   border: 1px solid rgb(112, 218, 90);
 }
+.img-container {
+        padding: 30px;
+        display: block;
+        height: auto;
+      }
 
+.column {
+  background-color: white;
+  float: left;
+  width: 50%;
+  padding: 20px;
+  height: 110px; 
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column{
+    width: 100%;
+    height: auto;
+  }
+}
+
+.column1 {
+  float: left;
+  padding: 10px;
+  height: 1200px; 
+}
+.right{
+width: 25%;
+
+}
+.left{
+width: 75%;
+}
+@media screen and (max-width: 600px) {
+  .column1{
+    width: 100%;
+    height:auto;
+  }
+}
 
 </style>
 </head>
 
 <body style="font-family:Georgia, 'Times New Roman', Times, serif;">
-<div class="logo">
-        <img src="logo.png" alt="" width="95" height="85" >
-        <a href="">Prijava</a>
-        <a href="">Registracija</a>
+  <div class="row">
+    <div class="column" style="background-color:rgb(255, 255, 255);">
+      <img src="logo.png" alt="" width="95" height="85" >
+    </div>
+    <div class="column" style="background-color:rgb(255, 255, 255); text-align:right;">
+      <a href="" style="color: rgb(53, 94, 53);">Prijava</a>
+      <a href="" style="color: rgb(53, 94, 53);">Registracija</a>
+    </div>
+  </div>
 
-</div>
 
 <div class="topnav"  id="mytopnav">
          <a href="index.html">Home</a>
@@ -152,7 +130,7 @@ tr {
 
 
 <div class ="row">
-        <div class="col-9 col-s-9" style="background-color:#aaa;">
+  <div class= "column1 left" style="width: 75%;">
           <h3 style="text-align:center;"> Kolegij - Razvoj naprednih web aplikacija</h3>
           <h3>Naziv projekta - Employees Sample Database </h3>
           <h4>Opis projekta -> <a href="https://dev.mysql.com/doc/employee/en/sakila-structure.html" > https://dev.mysql.com/doc/employee/en/sakila-structure.html </a> </h4>
@@ -165,7 +143,7 @@ tr {
             <p style="text-align:justify;"> Baza podataka o zaposlenicima dostupna je iz DB-a zaposlenika na GitHub-u . Možete preuzeti pretpakiranu arhivu podataka ili pristupiti informacijama putem Gita.
 
               Da biste koristili Zip arhivski paket, preuzmite arhivu i raspakirajte je pomoću <b>WinZip </b> ili drugog alata koji može čitati .zipdatoteke, a zatim promijenite mjesto u raspakirani direktorij paketa. Na primjer, pomoću <b>unzipa </b> izvršite ove naredbe:</p>
-         <table style="width:100%">
+         <table style="width: 70%">
           <tr>
             <td> 1 </td>
             <td>  shell>  unzip test_db-master.zip </td>
@@ -177,7 +155,7 @@ tr {
          </table>
           
          <p style="text-align:justify;"> Baza podataka Employees kompatibilna je s nekoliko različitih mehanizama za pohranu podataka, s tim da je InnoDB engine omogućen prema zadanim postavkama. Uredite employees.sqldatoteku i prilagodite komentare kako biste odabrali drugi mehanizam za pohranu:</p>
-         <table style="width:100%">
+         <table style="width:70%">
           <tr>
             <td> 1 </td>
             <td>  -- set storage_engine = InnoDB; </td>
@@ -199,20 +177,26 @@ tr {
             <td>  -- set storage_engine = Maria;</td>
           </tr>
          </table>
+         <div class="img-container">
+          <p>
+            Sljedeći dijagram daje pregled strukture uzorka baze podataka zaposlenika.
+          </p>
+          <img src="primjer.png" alt="Slika 1 Shema zaposlenika" width="400" height="400" >
         </div>
-        <div class="col-3 col-s-3" style="background-color:#bbb;">
+      </div>
+        <div class="column1 right" style="background-color:rgb(130, 172, 120);">
           
           <h2>Licenca za bazu podataka o zaposlenicima</h2>
           <h5 style="text-align:left;"> Ovo je djelo licencirano pod licencom Creative Commons Attribution-Share Alike 3.0 Unported. Da biste pogledali kopiju ove licence, posjetite <a href="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/ </a>  ili pošaljite pismo Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.</h5>
-          <br> 
-          <a href="https://github.com/helenazeko/RNWA"> Vježba 1 </a>
+        
         </div>
 </div>
 
+
 <div class="footer">
-    <p>PROJEKTNI TIM 1  Magdalena Rajić 
-    <a href="mailto:magdalena.rajic@student.fsre.ba"> magdalena.rajic@student.fsre.ba</a> i Helena Zeko 
-    <a href="mailto:helena.zeko@student.fsre.ba"> helena.zeko@student.fsre.ba</a> </p>
+    <p>PROJEKTNI TIM 1: <br>  Magdalena Rajić 
+    <a href="mailto:magdalena.rajic@student.fsre.ba" style="color: rgb(163, 157, 151);"> magdalena.rajic@student.fsre.ba</a><br> Helena Zeko 
+    <a href="mailto:helena.zeko@student.fsre.ba" style="color: rgb(163, 157, 151);"> helena.zeko@student.fsre.ba</a> </p>
   
 </div>
 
