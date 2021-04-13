@@ -92,4 +92,3 @@ echo "<br>Nije proslo spajanje<br>";
 //echo $hint === "" ? "no suggestion" : $hint;
 
 ?>
-
