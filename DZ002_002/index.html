@@ -106,30 +106,33 @@ width: 75%;
 
 <script>
   $(document).ready(function(){
-    load_data();
-    function load_data(query)
-    {
       $.ajax({
-        url:"index1.php",
-        method:"post",
-        data:{query:query},
-        success:function(data)
-        {
-          $('#result').html(data);
-        }
+        
+        type: "GET",
+				url: "index1.php",             
+				dataType: "html", 
+				data: { s:  ""},
+				success: function(response){                    
+					$("#table_all").html(response); 
+						
+					}
       });
-    }
+    
     
     $('#search_text').keyup(function(){
-      var search = $(this).val();
-      if(search != '')
-      {
-        load_data(search);
-      }
-      else
-      {
-        load_data();			
-      }
+      var str = $("#search_text").val();
+      $.ajax({
+        
+        type: "GET",
+				url: "index1.php",             
+				dataType: "html", 
+				data: { s:  str},
+				success: function(response){                    
+					$("#table_all").html(response); 
+						
+					}
+          
+        });
     });
   });
   </script>
@@ -184,9 +187,9 @@ width: 75%;
          <div style="background-color: rgb(190, 196, 190);">
           <p>Pretrazite zaposlenike tako sto pocnete pisati ime u polje ispod:</p>
           <form> 
-          Ime: <input type="text" name="search_text" id="search_text" class="form-control">
+          Ime: <input type="text" id="search_text" >
           </form>
-          Rezultat: <div id="result"></div>
+          <p> Prijedlozi:<br> <span id="txtHint" ></span><span id="table_all"></span></p>
          </div>
           
         
