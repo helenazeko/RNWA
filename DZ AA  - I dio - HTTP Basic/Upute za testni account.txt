@@ -1,0 +1,5 @@
+Za testni account u REST1 i REST2 servisu
+
+Korisničko ime: administrator
+Zaporka: mojalozinka
+
