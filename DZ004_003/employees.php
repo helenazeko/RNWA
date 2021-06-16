@@ -4,7 +4,7 @@ Class dbObj{
 
 	var $conn;
 	function getConnstring() {
-	$con = mysqli_connect("localhost", "root", "", "hr_dept") or die("Connection failed: " . mysqli_connect_error());
+	$con = mysqli_connect("localhost", "root", "", "employees") or die("Connection failed: " . mysqli_connect_error());
 	
 	/* check connection */
 	if (mysqli_connect_errno()) {
